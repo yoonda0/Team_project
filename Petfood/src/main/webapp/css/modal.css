@@ -1,0 +1,94 @@
+@media (min-width: 768px) {
+	.modal-dialog {
+		margin: 30px auto;
+		width: 65%;
+	}
+}
+
+.small-dialog {
+	top: 30%; width: 400px;
+}
+
+.large-dialog { top: 10%; width: 90%; }
+
+.login-body, .logout-body { text-align: center; }
+
+.logout-question { margin-top: 10px; }
+
+.login-item { margin-bottom: 10px; }
+
+.register-content { height: 600px; }
+
+.register-body { position: relative; padding: 15px; height: calc(100% - 56.71px); }
+
+.register-form-wrapper { height: 100%; overflow-y: scroll; }
+
+.register-form { height: 100%; }
+
+.register-item {
+	display: inline-block;
+	margin: 10px 0;
+	width: 100%;
+}
+
+.register-agree {
+	display: grid;
+	margin: auto;
+	padding: 10px 0;
+	width: 95%; height: 100%;
+	grid-area: agree;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 30px;
+	gap: 10px;
+}
+
+.agree-textarea { width: 100%; height: 100%; resize: none; word-break: keep-all; }
+
+.checkbox-warpper { height: 30px; }
+
+.register-agree .agree-checkbox { margin-right: 5px; }
+
+.checkbox-warpper:hover, .checkbox-warpper:focus-within { text-decoration: underline; }
+
+.register-id { grid-area: id; }
+
+.register-pass {grid-area: password;}
+
+.register-passcheck {grid-area: passwordcheck;}
+
+.register-name {grid-area: name;}
+
+.register-sex {grid-area: sex;}
+
+.register-phone {grid-area: phone;}
+
+.register-email {grid-area: email;}
+
+.email-text {grid-area: text;}
+
+.register-zipcode {grid-area: zipcode;}
+
+.register-address {grid-area: addr;}
+
+.detail-address {grid-area: addr2;}
+
+.btn-default { margin: 0 10px; }
+
+.label-design .txt { color: black; font-weight: normal; }
+
+.label {
+	display: inline-block;
+	margin: 0;
+	width: 120px;
+	text-align: left;
+	font-size: 16px;
+	color: black;
+}
+
+.register-input { width: 200px; }
+
+.zipcode-search { margin-left: 30px; }
+
+.button-area { margin: 10px 0; }
+
+.register-modal .button-area { grid-area: button; text-align: center; }

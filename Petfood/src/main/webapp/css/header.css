@@ -1,0 +1,141 @@
+/* SHIN BADA 220822 */
+
+/* Header */
+
+.header-wrapper {
+	background-color: white;								/* $background_color */
+	width: 100%; height: calc(5.209vw + 140px);/* $sticky_height + $logo_height + $logo_padding */
+	text-align: center;
+}
+
+/* Logo */
+
+.logo-wrapper { display: inline-block; padding: 20px; }		/* $logo_padding */
+
+.logo-wrapper .logo { position: relative; height: 100px; }	/* $logo_height */
+
+.logo-link {transition: all 0.3s;}							/* $transition_fast */
+
+.logo-link:focus-visible {outline-color: #369456;}			/* $main_color */
+
+/* sticky */
+
+.sticky-wrapper {
+	display: flex;
+	position: relative;
+	width: 100%;
+	height: 5.209vw;					/* $sticky_height */ /* 해상도 가로 1536 기준 80px */
+	padding: 0;
+	border-bottom: 1px solid #ebe9e9;
+	background-color: white;								/* $background_color */
+	text-align: center;
+	align-items: center;
+	transform: none;
+}
+
+.fixed.sticky-wrapper {
+	position: fixed; top: 0;
+	box-shadow: 0 2px 10px 0 #0000000f;
+	z-index: 10;
+	transition: transform 0.3s;									/* $transition_fast */
+}
+
+.fixed.sticky-wrapper.sticky-hide {
+	transform: translateY(-100%);
+}
+
+/* Category */
+
+.category-wrapper {
+	padding: 0;
+	border-bottom: none;
+	text-align: center;
+}
+
+.category-wrapper:after {
+	display: block;
+	clear: both;
+	content: '';
+}
+
+.category-wrapper > .category-item {						/* Bootstrap 기본 css 속성 무력화 */
+	display: inline-block;
+	float: none;
+	margin-bottom: 0;
+}
+
+.category {
+	color: black;
+	height: 5.209vw;										/* $sticky_height */
+	font-size: max(1.35vw, 13px);
+	top: 3px;
+	overflow: hidden;
+	transition: all 0.3s;									/* $transition_fast */
+}
+
+.category:after {
+	position: absolute;
+	width: 100%; height: 3px;								/* $after_height */
+	background-color: #369456;								/* $main_color */
+	bottom: 0; left: 0;
+	content: '';
+	transform: translateY(300%);
+	transition: all 0.3s;
+}
+
+.category:hover:after {transform: none;}
+
+.category-wrapper > .category-item > .category {			/* Bootstrap 기본 css 속성 무력화 */
+	line-height: calc(5.209vw - 20px);
+	padding: 10px;
+	margin-right: 0;
+	border: none;
+	background-color: transparent;
+}
+
+.category-wrapper > .category-item > .category:hover,		/* Bootstrap 기본 css 속성 무력화 */
+.category-wrapper > .category-item > .category:focus-visible {
+	color: #369456;											/* $main_color */
+	outline-color: #369456;									/* $main_color */
+}
+
+.search-wrapper {
+	display: flex;
+	height: 46px;											/* $search_height */
+	padding-right: 30px;
+	justify-content: flex-end;
+}
+
+.search-form {
+	position: relative; 
+	height: 46px;											/* $search_height */
+	background-color: #8effb53d;								/* $background_color_white */
+	border-radius: 30px;
+	border: 3px solid white;
+	transition: all 0.3s;
+}
+
+.search-form:focus-within {background-color: white; border-color: #369456;}
+
+.search-input {
+	padding: 0 40px 0 20px;
+	background-color: transparent;
+	border: none; border-radius: 30px;
+	line-height: 40px;										/* $search_height */
+	letter-spacing: -0.5px;
+	outline: none;
+}
+
+.search-btn {
+	position: absolute; right: 0;
+	width: 40px;
+	height: 100%;
+	padding: 1px 9px;
+	border: none; border-radius: 30px;
+	background: center center/cover no-repeat;
+	stroke: darkgrey;
+	stroke-width: 2px;
+	transition: all 0.3s;									/* $transition_fast */
+}
+
+.search-btn:hover, .search-btn:focus-visible {stroke: #369456;}		/* $main_color */

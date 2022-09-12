@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+
+	article{	border:1px solid;
+			background:#d3a27f;
+			padding:20px;
+			height:50px;
+			display: flex;
+			justify-content:space-around;
+			margin:30px;
+		
+	 }
+	nav1{  border:1px solid;
+				background:greend;
+				padding:20px;
+				
+				height:18px;
+				float:left;
+			
+				
+	}
+
+	
+	tbody{ text-align:center;
+
+	}
+	div { border-bottom:3px solid black;
+			border-top:3px solid black;
+	
+	
+	
+	}
+	
+	
+	

@@ -1,0 +1,198 @@
+/* SHIN BADA 220828 */
+/* article */
+
+/* Wrapper */
+
+.product-wrapper {
+    position: relative;
+    margin: 20px 15px; float: left;
+    width: calc(25% - 30px);
+    font-size: 1em;
+}
+
+.product-link {
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    transition: all 0.3s;
+}
+
+.product-link:hover, .product-link:focus-visible {text-decoration: none; border-color: #369456;}
+																	
+.product-link:focus-within, .quick-btn:focus-visible {outline: none}
+
+/* Thumbnail */
+
+.thumbnail-wrapper {position: relative; overflow: hidden;}
+
+.thumbnail-img {height: auto; width: 100%;}
+
+/* Quick button */
+
+.quick-item {
+    position: absolute;
+    width: 90px; height: 45px;
+    left: calc(50% - 45px);
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.product-link:hover .quick-item, .product-link:focus-visible .quick-item, 
+.quick-item:focus-within {
+    opacity: 0.99;
+    transform: translateY(calc(-100% - 10px));
+}
+
+.quick-btn {
+    position: relative;
+    float: left;
+    padding: 0;
+    border: 1px solid #474747;
+    width: 50%; height: 100%;
+    box-sizing: border-box;
+    background-color: black;
+    z-index: 4;
+    transition: all 0.3s;
+}
+
+.quick-btn:hover, .quick-btn:focus-visible {
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+.quick-btn-img {
+    position: absolute; top: 0px;
+    padding: 25%;
+    fill: #e2e2e2;
+    transition: all 0.3s;
+}
+
+.quick-btn:hover .quick-btn-img, .quick-btn:focus-visible .quick-btn-img {
+    fill: #369456;                                                  
+}
+
+.quick-btn-img.svg-stroke {
+    fill: black;
+    stroke: #e2e2e2;
+}
+
+.quick-btn:hover .quick-btn-img.svg-stroke, .quick-btn:focus-visible .quick-btn-img.svg-stroke {
+    stroke: #369456;                                                    
+    fill: white;
+    background-color: white;
+}
+
+/* Product Information */
+
+.product-wrapper .product-info {
+	position: relative;
+	padding: 10px;
+}
+
+.product-name {
+	color: black;
+	overflow: hidden;
+	word-wrap: normal;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+    transition: all .3s;									
+}
+
+.product-link:hover .product-name, .product-link:focus-visible .product-name {
+    color: #369456;                                               
+}
+
+.product-price {
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.full-price {
+	color: #6c6c6c;
+	text-decoration: line-through;
+    transition: all .3s;											
+}
+
+.product-link:hover .full-price, .product-link:focus-visible .full-price {
+    color: #8db89b;											
+}
+
+.bargin-price {
+	font-weight: 600;
+	color: black; 
+    transition: all .3s;										
+}
+
+.product-link:hover .bargin-price, .product-link:focus-visible .bargin-price {
+    color: #369456;                                                     
+}
+
+/* Sale information */
+
+.sale-rate {
+    position: absolute;
+    top: -7px;
+    right: -3px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: black;
+    box-shadow: -1px 1px 2px rgba(0,0,0,0.2);
+    opacity: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    line-height: 40px;
+    transition: transform .3s, opacity .3s;
+}
+
+.product-link:hover .sale-rate {
+    transform: translateY(4px);
+    opacity: 0.99;
+}
+
+.sale-percent {
+    font-weight: normal;
+    font-size: calc(1em - 3px);
+}
+
+/* Product Ranking */
+
+.product-rank {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #ffffff87;
+    /* box-shadow: -1px 1px 2px rgba(0,0,0,0.2); */
+    /* opacity: 0; */
+    color: #006424;
+    font-weight: bold;
+    font-size: 1em;
+    line-height: 40px;
+    transition: transform .3s, opacity .3s;
+}
+
+.product-link:hover .product-rank {
+    transform: translateY(4px);
+    opacity: 0.99;
+}
+
+/* editing */
+
+/*
+.quick-item {z-index: 1;}
+
+.product-name {width: 100%;}
+
+.thumbnail-img {
+    z-index: 1;
+    float: left;
+}

@@ -1,0 +1,49 @@
+/* SHIN BADA 220824 */
+/* footer */
+
+.footer-wrapper {
+	background-color: #1f6035;		/* $main_color_darker */
+	overflow: hidden;
+}
+
+.footer-nav {overflow: hidden;}
+
+.policy-box {
+	position: relative;
+	padding: 0;
+	margin: 0 40px 20px 40px;
+	border-bottom: 1px solid #ffffff29;
+	overflow: hidden;
+}
+
+.policy-item {
+	float: left;
+	margin: 10px;
+}
+
+.policy {
+	padding: 10px;
+	color: white;						/* $strong_style */
+	font-size: 14px;
+	font-weight: 300;					/* $strong_style */
+	transition: all 0.3s;					/* $transition_fast */
+}
+
+.policy:hover,.policy:focus {color: white;}
+.policy:focus {text-decoration: none;}
+.policy:focus-visible {text-decoration: underline;}
+
+.txt {
+	line-height: 1.6;
+	padding-right: 18px;
+	color: #ffffffd9;
+}
+
+.address {display: inline;}
+
+.copyright {
+	color: white;						/* $strong_style */
+	font-weight: 300;					/* $strong_style */
+	margin: 30px 0;
+	transition: all 0.3s;					/* $transition_fast */
+}

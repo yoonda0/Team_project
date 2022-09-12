@@ -1,0 +1,22 @@
+/* SHIN BADA 220824 */
+/* common */
+
+a {text-decoration: none;}
+
+a, svg {display: block;}
+
+ul {list-style: none;}
+
+.body { font-family: Noto Sans CJK KR, 'Noto', Sans-serif; }
+
+*:focus-visible {outline-color: #369456;}								/* $main_color */
+
+
+/* content */
+
+.main-content {
+	word-break: keep-all;
+	padding: 30px 80px;
+	width: 100%;
+	overflow: hidden;
+}

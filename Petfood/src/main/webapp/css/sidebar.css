@@ -1,0 +1,75 @@
+/* SHIN BADA 220825 */
+/* Sidebar */
+
+.sidebar {
+	position: fixed;
+	width: 5vw;											/* $side_button_width */
+	max-width: 55px;									/* $max_side_button_width */
+	top: calc(9vw + 100px); right: 0;
+	font-size: 0;
+	opacity: 0.99;
+	z-index: 3;
+	transition: transform .3s;
+}
+
+.sidebar.hide-bar { transform: translateX(100%); }
+
+.side-btn {
+	position: relative;
+	padding: 0;
+	width: 5vw; height: 5vw;							/* $side_button_width, $side_button_height */
+	max-width: 55px; max-height: 55px;					/* $max_side_button_width, $max_side_button_height */
+    border: 1px solid #dddddd;
+    text-align: left;
+    background: white center center/ 50% no-repeat;
+    transition: opacity .3s, background-color .3s;
+}
+
+.side-btn:hover, .side-btn:focus-visible { background-color: #fafafa; }
+
+.side-btn-img { padding: 25%; background-color: white; transition: fill .3s, background-color .3s; }
+
+.side-btn:hover .side-btn-img, 
+.side-btn:focus-visible .side-btn-img { background-color: #fafafa; fill: #369456; }			/* $main_color */
+
+.side-btn-desc {
+    display: inline-block;
+    position: absolute;
+    top: 10%;
+    padding: 20% 10px;
+    width: auto;
+    min-width: 100%;
+    height: 80%;
+    background-color: #369456;
+    font-size: min(1.28vw, 16px);
+    color: white;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.side-btn:hover .side-btn-desc,
+.side-btn:focus-visible .side-btn-desc {opacity: 0.99; transform: translateX(-100%); }
+
+.hide-bar .side-btn:hover .side-btn-desc,
+.hide-bar .side-btn:focus-visible .side-btn-desc { opacity: 0; transform: translateX(0); }
+
+.desc-text { word-break: keep-all; }
+
+.move-btn {
+	margin-top: 10px;									/* $move_dif */
+	width: calc(5vw - 10px); height: calc(5vw - 10px);	/* calc($side_button_width - $move_dif), calc($side_button_height - $move_dif) */
+	max-width: 45px; max-height: 45px;		/* $max_side_button_width - $move_dif, $max_side_button_height - $move_dif */
+	left: 5px;											/* $move_dif / 2 */
+	border-radius: 30px;
+	opacity: 0.7;
+	transition: opacity .3s, transform .3s;
+}
+
+.move-btn:hover, .move-btn:focus-visible { opacity: 0.9; }
+
+.move-btn .side-btn-img { border-radius: 30px; }
+														
+.move-btn.hide-btn {opacity: 0;}
+
+.top-btn .side-btn-img {transform: rotate(180deg)}
