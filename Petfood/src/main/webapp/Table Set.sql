@@ -35,6 +35,7 @@ CREATE TABLE `zipcode` (
 CREATE TABLE `product` (
  `num` int unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
  `name` varchar(40) NOT NULL,
+ `thumbnail` varchar(20) NOT NULL,
  `price_before` int unsigned NOT NULL DEFAULT 0,
  `price` int unsigned NOT NULL DEFAULT 0,
  `views` int unsigned NOT NULL DEFAULT 0,
