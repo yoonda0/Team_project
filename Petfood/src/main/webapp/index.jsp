@@ -1,3 +1,1 @@
-<%
-  response.sendRedirect(request.getContextPath() + "/main.jsp");
-%>
+<jsp:forward page="/main.jsp" />
